@@ -30,4 +30,9 @@ Route::middleware('auth:sanctum')->group(function () {
         'user/bookings',
         [\App\Http\Controllers\User\BookingController::class, 'index']
     );
+
+    Route::post(
+        'owner/properties',
+        [\App\Http\Controllers\Owner\PropertyController::class, 'store']
+    );
 });
